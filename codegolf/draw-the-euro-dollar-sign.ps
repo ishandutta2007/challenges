@@ -1,0 +1,36 @@
+%
+% The goal is to output or display an image with an € (euro) sign according to the following specs (ignoring the border of the sign).
+%
+% € sign
+%
+% Source: http://en.wikipedia.org/wiki/File:Euro_Construction.svg
+%
+% Rules:
+%
+%    The program / script must take the height of the € sign in pixels as an argument (empty space around the sign is optional)
+%    The € sign can't be drawn as or from a character, directly (it's forbidden to print the € in the image) or indirectly (calculating 8364 then displaying it in a HTML page)
+%    The output does not need to be saved to any file, it can be displayed then just shown as a screenshot
+%    Standard “loopholes” are forbidden
+%    Shortest code wins
+
+
+120 120 div dup scale
+75 60 translate
+
+0 0 60 45 -50 arc
+0 0 50 -40 40 arcn
+closepath
+
+-71 -5 moveto
+-75 -15 lineto
+19 -15 lineto
+23 -5 lineto
+closepath
+
+-71 15 moveto
+-75 5 lineto
+27 5 lineto
+31 15 lineto
+closepath
+
+fill

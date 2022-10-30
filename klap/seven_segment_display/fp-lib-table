@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "Seven Segment Display")(type KiCad)(uri ./footprints)(options "")(descr ""))
+)

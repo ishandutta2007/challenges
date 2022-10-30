@@ -1,0 +1,52 @@
+Lab1. 100 points. Introduction to AI. Implement the following functions. 
+Each function is 20 points. All functions must be recursive.
+You can use any auxiliary functions you deemed necessary to
+implement the functions described in the assignment.
+DUE: Tuesday 27th at 1 pm. Follow instructions for submission
+in the course web page. Hard copy to me at the
+beginning of class. No late assignments will be accepted. Name the
+functions as I have named them in the examples. This is an individual
+assingment. Collaboration is not allowed.
+
+1. Write a function, subset, that takes as input two lists (already
+   sets), say L1 and L2, containing just atoms and returns t if
+   L1 is a subset of L2, nil otherwise. (L1 is a subset of L2
+  if all atoms in L1 are members of L2).
+
+   (m-subset '(a b) '(k m b l a)) = T
+   (m-subset '(k) '( m a))      = NIL
+   (m-subset '(m a) '( a k n m))= T
+
+
+2. Write a function that deletes all occurences of a given atom
+   in a list of any structure. The structure of the list should remain
+   the same except for deleting the atom.
+
+   (m-delete 'a '(a d c))    =  (d c)
+   (m-delete 'a '((a h) d a))  =  ( (h) d)
+   (m-delete 'a '( b c))     =  (b c)
+
+3. Write a function that takes as input two atoms, say atoms "A" and
+"B", and a list of any structure, say L. The function
+inserts atom A immediately before all occurrences of the atom B.
+
+   (m-insert 'h 'a '(l m n a))       = (l m n h a)
+   (m-insert 'd 'a '( a n (a (a))))  = (d a n (d a (d a)))
+   (m-insert 'k 'b '(b (b b) b))     = (k b (k b k b) k b))    
+   (m-insert 'n 'j '(s (n n) ((s)))) = (s (n n) ((s)))
+   
+4. Write a function that takes as input a list containing only sublists,
+  (not atoms), and returns in a list a count of all atoms in each sublist.
+   Each number in the output list should correspond in order to each sublist
+   in the input list.
+
+   (s-count '( ((a) f) ( k l) (m))) = ( 2 2 1)
+   (s-count '( (((k))) (m n (d))))  = ( 1 3)
+   (s-count '( (a) (k)))            = (1 1)
+
+5. Write a function, m-maximum, that returns the greatest number in
+a list containing just numbers. Do not use any maximum function already
+defined in Lisp.
+
+  (m-maximum '(5 4 3 ))  =  5
+  (m-maximum '(8 3 9 1)) =  9

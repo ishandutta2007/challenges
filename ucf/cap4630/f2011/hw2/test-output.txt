@@ -1,0 +1,57 @@
+This is SBCL 1.0.45, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "assign2.l") 
+
+T
+* (followed-by    '(a b c))
+
+(A B)
+* (followed-by    '(a(b(c))))
+
+NIL
+* (followed-by    '(a c (k m)))
+
+(A K)
+* (wff 'p)
+
+T
+* (wff '(oor p (andd q r)))
+
+T
+* (wff '(not(oor p (andd q r))))
+
+T
+* (wff '(oor p(andd q)))
+
+NIL
+* (wff '(if p (andd q r)))
+
+T
+* (wff '(if p (x3 p q p)))
+
+T
+* (m-deepest '(a b))
+
+A
+* (m-deepest '((b) h))
+
+B
+* (m-deepest '( ((d)) (k)))
+
+D
+* (m-depth '(a))
+
+1
+* (m-depth '((k)))
+
+2
+* (m-depth '((k) (((m l p)))))
+
+4
+* 
+

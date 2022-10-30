@@ -1,0 +1,126 @@
+{
+	"Adj": [
+		[
+			"bald"
+		],
+		[
+			"smug"
+		],
+		[
+			"important"
+		],
+		[
+			"tame"
+		],
+		[
+			"overstaffed"
+		],
+		[
+			"corsage"
+		]
+	],
+	"Det": [
+		[
+			"this"
+		],
+		[
+			"that"
+		],
+		[
+			"the"
+		]
+	],
+	"Interj": [
+		[
+			"oh"
+		],
+		[
+			"my"
+		],
+		[
+			"wow"
+		],
+		[
+			"darn"
+		]
+	],
+	"N": [
+		[
+			"amoeba"
+		],
+		[
+			"dichotomy"
+		],
+		[
+			"seagull"
+		],
+		[
+			"trombone"
+		],
+		[
+			"overstaffed"
+		],
+		[
+			"corsage"
+		]
+	],
+	"NP": [
+		[
+			"Det",
+			"N"
+		],
+		[
+			"Det",
+			"N",
+			"that",
+			"VP"
+		],
+		[
+			"Det",
+			"Adj",
+			"N"
+		]
+	],
+	"S": [
+		[
+			"NP",
+			"VP"
+		],
+		[
+			"Interj",
+			"NP",
+			"VP"
+		]
+	],
+	"VP": [
+		[
+			"Vtrans",
+			"NP"
+		],
+		[
+			"Vintr"
+		]
+	],
+	"Vintr": [
+		[
+			"coughs"
+		],
+		[
+			"daydreams"
+		],
+		[
+			"whines"
+		]
+	],
+	"Vtrans": [
+		[
+			"computes"
+		],
+		[
+			"examines"
+		],
+		[
+			"foregrounds"
+		]
+	]
+}

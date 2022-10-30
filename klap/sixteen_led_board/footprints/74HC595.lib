@@ -1,0 +1,35 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# 74HC595
+#
+DEF 74HC595 IC 0 40 Y Y 1 L N
+F0 "IC" -300 -701 50 H V L BNN
+F1 "74HC595" 0 0 50 H I L BNN
+F2 "SO16" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+DRAW
+T 0 -300 501 70 0 0 0 74HC595 Normal 0 L B
+S -300 -600 300 500 0 0 15 f
+X QB 1 400 200 100 L 40 40 0 0 T 
+X QC 2 400 100 100 L 40 40 0 0 T 
+X QD 3 400 0 100 L 40 40 0 0 T 
+X QE 4 400 -100 100 L 40 40 0 0 T 
+X QF 5 400 -200 100 L 40 40 0 0 T 
+X QG 6 400 -300 100 L 40 40 0 0 T 
+X QH 7 400 -400 100 L 40 40 0 0 T 
+X ~SCLR 10 -400 100 100 R 40 40 0 0 I 
+X SCLK 11 -400 200 100 R 40 40 0 0 I 
+X RCLK 12 -400 -100 100 R 40 40 0 0 I 
+X ~OE 13 -400 -300 100 R 40 40 0 0 I 
+X SER 14 -400 400 100 R 40 40 0 0 I 
+X QA 15 400 300 100 L 40 40 0 0 T 
+X QH' 9 400 -500 100 L 40 40 0 0 T 
+X GND 8 -400 -500 100 R 40 40 0 0 W 
+X VCC 16 400 400 100 L 40 40 0 0 W 
+ENDDRAW
+ENDDEF
+#
+# End Library

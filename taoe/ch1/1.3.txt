@@ -1,0 +1,29 @@
+Prove formula for series and parallel resistors
+
+***Series
+KCL states that sum of current in = sum of currents out
+implying that in a series circuit, the current is the same everywhere, this
+implies we will have the following equation when we try to sum circuits in
+series
+
+R = V/I
+Vtotal = V1 + V2 + V3 ...
+Itotal = I
+Rtotal = Vtotal/I
+
+V1/I + V2/I + V3/I ... = Rtotal/I
+R1 + R2 + R3 ... = Rtotal
+
+***Parallel
+KVL states that the voltage around a loop is 0, implying that all
+
+I = V/R
+Itotal = I1 + I2 + I3 ...
+Vtotal = V
+Rtotal = V/Itotal
+
+Rtotal = V/(I1 + I2 + I3 ...) substitute current Ix in terms of resistance Rx
+Rtotal = V / (V/R1 + V/R2 + V/R3 ...) Divide by V since it is a constant and get
+Rtotal = 1 / (1/R1 + 1/R2 + 1/R3 ...)
+1/Rtotal = 1/R1 + 1/R2 + 1/R3 + ...
+

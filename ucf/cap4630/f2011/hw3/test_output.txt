@@ -1,0 +1,24 @@
+This is SBCL 1.0.45, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "minimax.cl")
+
+T
+* (minimax  '((7 8 2) 4 (3 4 5)))
+
+(2 4)
+* (minimax  '((2 3 4) (1 9) 1 2)) 
+
+(1 2)
+* (minimax '( (3 (4 5))  (6 (9 10))  (5 2))) 
+
+(2 6)
+* (minimax  '( (3 4 (9)) (100 2)))
+
+(1 3)
+* 
+

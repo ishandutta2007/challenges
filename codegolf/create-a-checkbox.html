@@ -1,0 +1,61 @@
+<!--
+
+Write a program that creates a two-state checkbox that people can interact with using a mouse.
+
+Specifically, your program should achieve all of the following:
+
+Have a 8×8 pixel (or larger if desired) region of the screen that is the clickable area of the checkbox. Henceforth this region is simply called the checkbox.
+
+When the mouse cursor is moved within the checkbox and the default* mouse button is pressed, the checkbox should toggle states.
+Checked becomes unchecked. Unchecked becomes checked.
+
+The checkbox should not move when it is toggled.
+
+In the checked state, the checkbox may be any colors.
+
+In the unchecked state, the checkbox may be any colors as long as at least 16 pixels are visually distinct from the checked state.
+
+In a single program instance, all checked states should be visually identical to one another and all unchecked states should be visually identical to one another.
+
+Don't end the program until it's explicitly terminated (e.g. via exit button or Alt+F4), so a user can click the checkbox as much as they want.
+
+*You may assume the default mouse button is always left click, but it's also fine to use the default as defined by mouse software or the OS, which may not actually be left click depending on the user.
+
+Notes
+It does not matter what is outside of your checkbox region. It could just be the desktop. It could be a portion of a console that changes on every toggle.
+
+It does not matter what state your checkbox starts in.
+
+The checkbox region may have any dimensions at or above 8×8 pixels. It need not be square.
+
+You may make minor allowances for settings that are out of your control such as console font size, browser zoom, monitor resolution, etc. As long your program works in a reasonable test setting it should be valid.
+
+If your program opens a window, you may assume it has been dragged to an appropriate location on the screen if necessary (e.g. top left corner).
+
+You may use markup languages such as HTML or other languages we usually don't consider as full-fledged programming languages.
+
+Your checkbox must be be toggleable using the default mouse button.
+It's alright if it also toggles for other forms of input (e.g. right mouse button), with the exception of mouse motion. i.e. the state should not change if the mouse is merely moved within the checkbox.
+
+Screenshots of your checkbox in action are highly encouraged!
+
+Scoring
+The shortest code in bytes wins.
+
+Example
+A canonical HTML example in 23 bytes.
+
+<input type="checkbox">
+Expand snippet
+For me in Google Chrome, this makes a 12×12 pixel checkbox and about 30 pixels clearly change between checked and unchecked states.
+
+I make the allowance that browser zoom is at 100%.
+
+-->
+
+<html>
+	<head><title>Checkbox</title></head>
+	<body>
+		<input type="checkbox">Checkmate</input>
+	</body>
+</html>

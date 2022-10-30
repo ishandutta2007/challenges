@@ -1,0 +1,60 @@
+Lab2. Each question is 25 points. Due date: Oct 18th
+
+
+1. Write a recursive function that obtains all atoms which are immediately
+  followed by another atom. The output must be a flat list.
+
+   (followed-by    '(a b c))      = (a b)
+   (followed-by    '(a(b(c))))    = NIL
+   (followed-by    '(a c (k m)))  = (a k)
+
+
+2. Write a function (WFF L) that will return T if a formula in the following
+ calculus is well formed, NIL otherwise. The operator X3 takes 3 arguments.
+ The binary operators are: IF, OOR, ANDD.  The unary operator is NOT.
+
+
+ A formula in this calculus is well formed according to the following
+ rules.
+
+ a) p, q, r, s, t, u, v, w are well formed.
+
+ b) If A and B are well formed, so are (OOR A B), (ANDD A B), (IF A B), and
+    (NOT A).
+
+ c) If A, B and C are well formed, so is (X3 A B C).
+
+ d) The only well formed formulas are those defined by a), b) and c).
+
+
+ (wff 'p)                            = t
+
+ (wff '(oor p (andd q r)))           = t
+
+ (wff '(not(oor p (andd q r))))      = t
+
+ (wff '(oor p(andd q)))              = nil
+
+ (wff '(if p (andd q r)))            = t
+
+ (wff '(if p (x3 p q p)))            = t
+
+
+3. Write a function that returns the deepest atom in a list (tree)
+  of any structure. If there is more than one atom at the same
+  level, return any one of them.
+
+  (m-deepest '(a b))        = a  ;b is also a correct answer
+  (m-deepest '((b) h))      = b
+  (m-deepest '( ((d)) (k))) = d
+
+ Hint: There are several ways to design and implement this algorithm in
+ Lisp. You may find helpful to implement a function that answers T if a list
+ contains just atoms.
+
+
+4. Write a function that returns a number indicating the depth of a tree.
+
+  (m-depth '(a))                 = 1
+  (m-depth '((k)))               = 2
+  (m-depth '((k) (((m l p)))))   = 4

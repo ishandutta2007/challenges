@@ -1,0 +1,11 @@
+You have 5k resistor and a 10k resistor. What is their combined resistance
+(a) in series
+(b) in parallel
+
+-----
+
+(a) Rt = R1 + R2
+    5k + 10k = 15k
+(b) Rt = 1/R1 + 1/R2 = (R1+R2)/(R1R2)
+    1/5k + 1/10k = ~3.333k
+

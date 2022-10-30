@@ -1,0 +1,107 @@
+This is SBCL 1.0.45, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "assign4.l")
+
+T
+* (prove 'x)
+
+(PROVING-GOAL X) 
+(L1-OR-TREE ((R1 &AND (A B C)) (R4 &AND (A V M)))) 
+(TRYING-RULE (R1 &AND (A B C))) 
+(PROVING-GOAL A) 
+(L1-OR-TREE ((R5 &AND (T P)) (R6 &AND (W M)))) 
+(TRYING-RULE (R5 &AND (T P))) 
+(PROVING-GOAL T) 
+(L1-OR-TREE NIL) 
+(FAIL (R5 &AND (T P))) 
+(TRYING-RULE (R6 &AND (W M))) 
+(PROVING-GOAL W) 
+(W GIVEN) 
+(PROVING-GOAL M) 
+(M GIVEN) 
+(PROVED (R6 &AND (W M))) 
+(PROVING-GOAL B) 
+(B GIVEN) 
+(PROVING-GOAL C) 
+(L1-OR-TREE ((R7 &AND (A B)))) 
+(TRYING-RULE (R7 &AND (A B))) 
+(PROVING-GOAL A) 
+(L1-OR-TREE ((R5 &AND (T P)) (R6 &AND (W M)))) 
+(TRYING-RULE (R5 &AND (T P))) 
+(PROVING-GOAL T) 
+(L1-OR-TREE NIL) 
+(FAIL (R5 &AND (T P))) 
+(TRYING-RULE (R6 &AND (W M))) 
+(PROVING-GOAL W) 
+(W GIVEN) 
+(PROVING-GOAL M) 
+(M GIVEN) 
+(PROVED (R6 &AND (W M))) 
+(PROVING-GOAL B) 
+(B GIVEN) 
+(PROVED (R7 &AND (A B))) 
+(PROVED (R1 &AND (A B C))) 
+T
+* (prove 'a)
+
+(PROVING-GOAL A) 
+(L1-OR-TREE ((R5 &AND (T P)) (R6 &AND (W M)))) 
+(TRYING-RULE (R5 &AND (T P))) 
+(PROVING-GOAL T) 
+(L1-OR-TREE NIL) 
+(FAIL (R5 &AND (T P))) 
+(TRYING-RULE (R6 &AND (W M))) 
+(PROVING-GOAL W) 
+(W GIVEN) 
+(PROVING-GOAL M) 
+(M GIVEN) 
+(PROVED (R6 &AND (W M))) 
+T
+* (prove 'b)
+
+(PROVING-GOAL B) 
+(B GIVEN) 
+T
+* (prove 'm)
+
+(PROVING-GOAL M) 
+(M GIVEN) 
+T
+* (prove 'v)
+
+(PROVING-GOAL V) 
+(L1-OR-TREE NIL) 
+NIL
+* (prove 'w)
+
+(PROVING-GOAL W) 
+(W GIVEN) 
+T
+* (prove 'c)
+
+(PROVING-GOAL C) 
+(L1-OR-TREE ((R7 &AND (A B)))) 
+(TRYING-RULE (R7 &AND (A B))) 
+(PROVING-GOAL A) 
+(L1-OR-TREE ((R5 &AND (T P)) (R6 &AND (W M)))) 
+(TRYING-RULE (R5 &AND (T P))) 
+(PROVING-GOAL T) 
+(L1-OR-TREE NIL) 
+(FAIL (R5 &AND (T P))) 
+(TRYING-RULE (R6 &AND (W M))) 
+(PROVING-GOAL W) 
+(W GIVEN) 
+(PROVING-GOAL M) 
+(M GIVEN) 
+(PROVED (R6 &AND (W M))) 
+(PROVING-GOAL B) 
+(B GIVEN) 
+(PROVED (R7 &AND (A B))) 
+T
+* 
+

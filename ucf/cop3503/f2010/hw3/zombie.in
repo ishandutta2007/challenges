@@ -1,0 +1,65 @@
+3
+9
+9
+B C 4
+D E 2
+A D 3
+A E 1
+A F 4
+A G 6
+B G 3
+C G 2
+C F 5
+11
+11
+A D 1
+D F 2
+F A 8
+A C 3
+B H 2
+C B 6
+A B 5
+H G 3
+G E 7
+F E 3
+H G 3
+13
+13
+A D 1
+D F 2
+F A 8
+A C 3
+B H 2
+C B 6
+A B 5
+H G 3
+G E 7
+F E 3
+H G 3
+D F 1
+G C 4
+
+Solutions
+The minimum cost of the railway system is 17.
+A E 1
+A F 4
+B G 3
+C F 5
+C G 2
+D E 2
+The minimum cost of the railway system is 19.
+A B 5
+A C 3
+A D 1
+B H 2
+D F 2
+E F 3
+G H 3
+The minimum cost of the railway system is 17.
+A C 3
+A D 1
+B H 2
+C G 4
+D F 1
+E F 3
+G H 3

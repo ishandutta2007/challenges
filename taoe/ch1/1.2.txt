@@ -1,0 +1,9 @@
+How much power will be dissipate if you place a 1 ohm resistor across a 12V
+car battery?
+
+I = V/R
+12/1 = 12 amps
+
+P = VI
+12*12 = 144 watts
+

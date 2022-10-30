@@ -1,0 +1,56 @@
+This is SBCL 1.0.45, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "assign1.l")
+
+T
+* (m-subset '(a b) '(k m b l a)) 
+
+T
+* (m-subset '(k) '( m a)) 
+
+NIL
+*  (m-subset '(m a) '( a k n m))   
+
+T
+* (m-delete 'a '(a d c)) 
+
+(D C)
+*    (m-delete 'a '((a h) d a)) 
+
+((H) D)
+*  (m-delete 'a '( b c)) 
+
+(B C)
+* (m-insert 'h 'a '(l m n a)) 
+
+(L M N H A)
+*  (m-insert 'd 'a '( a n (a (a))))
+
+(D A N (D A (D A)))
+*  (m-insert 'k 'b '(b (b b) b))  
+
+(K B (K B K B) K B)
+*  (m-insert 'n 'j '(s (n n) ((s)))) 
+
+(S (N N) ((S)))
+* (s-count '( ((a) f) ( k l) (m))) 
+
+(2 2 1)
+* (s-count '( (((k))) (m n (d)))) 
+
+(1 3)
+*   (s-count '( (a) (k)))   
+
+(1 1)
+*  (m-maximum '(5 4 3 )) 
+
+5
+* (m-maximum '(8 3 9 1)) 
+
+9
+

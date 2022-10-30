@@ -1,0 +1,163 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "NRF24 Breakout"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x08 J1
+U 1 1 6150FF10
+P 6800 2450
+F 0 "J1" V 6764 1962 50  0000 R CNN
+F 1 "Conn_01x08" V 6673 1962 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6800 2450 50  0001 C CNN
+F 3 "~" H 6800 2450 50  0001 C CNN
+	1    6800 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 3100 6900 3100
+Wire Wire Line
+	6900 3100 6900 2650
+Wire Wire Line
+	6000 3200 6600 3200
+Wire Wire Line
+	6600 3200 6600 2650
+Wire Wire Line
+	7100 3400 7100 2650
+Wire Wire Line
+	6000 3500 6700 3500
+Wire Wire Line
+	6700 3500 6700 2650
+Wire Wire Line
+	6000 3600 6800 3600
+Wire Wire Line
+	6800 3600 6800 2650
+Wire Wire Line
+	6000 3700 7000 3700
+Wire Wire Line
+	7000 3700 7000 2650
+Wire Wire Line
+	6000 3400 7100 3400
+$Comp
+L RF:NRF24L01_Breakout U1
+U 1 1 614D908C
+P 5500 3400
+F 0 "U1" H 5879 3354 50  0000 L CNN
+F 1 "NRF24L01_Breakout" H 5879 3445 50  0000 L CNN
+F 2 "RF_Module:nRF24L01_Breakout" H 5650 4000 50  0001 L CIN
+F 3 "http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf" H 5500 3300 50  0001 C CNN
+	1    5500 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7200 4000 5500 4000
+Wire Wire Line
+	5500 2800 6500 2800
+Wire Wire Line
+	6500 2800 6500 2650
+Wire Wire Line
+	7200 2650 7200 4000
+$Comp
+L power:GND #PWR0101
+U 1 1 614F87E1
+P 5500 2550
+F 0 "#PWR0101" H 5500 2300 50  0001 C CNN
+F 1 "GND" H 5505 2377 50  0000 C CNN
+F 2 "" H 5500 2550 50  0001 C CNN
+F 3 "" H 5500 2550 50  0001 C CNN
+	1    5500 2550
+	-1   0    0    1   
+$EndComp
+Connection ~ 5500 2800
+$Comp
+L power:VCC #PWR0102
+U 1 1 614FD2DC
+P 5500 4350
+F 0 "#PWR0102" H 5500 4200 50  0001 C CNN
+F 1 "VCC" H 5515 4523 50  0000 C CNN
+F 2 "" H 5500 4350 50  0001 C CNN
+F 3 "" H 5500 4350 50  0001 C CNN
+	1    5500 4350
+	-1   0    0    1   
+$EndComp
+Connection ~ 5500 4000
+Wire Wire Line
+	5500 4000 5500 4350
+Wire Wire Line
+	5500 2550 5500 2800
+Wire Wire Line
+	4350 5000 4350 5200
+Wire Wire Line
+	4350 4100 4350 4250
+$Comp
+L power:GND #PWR0104
+U 1 1 614FFD7F
+P 4350 5200
+F 0 "#PWR0104" H 4350 4950 50  0001 C CNN
+F 1 "GND" H 4355 5027 50  0000 C CNN
+F 2 "" H 4350 5200 50  0001 C CNN
+F 3 "" H 4350 5200 50  0001 C CNN
+	1    4350 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 614FF85B
+P 4350 4100
+F 0 "#PWR0103" H 4350 3950 50  0001 C CNN
+F 1 "VCC" H 4365 4273 50  0000 C CNN
+F 2 "" H 4350 4100 50  0001 C CNN
+F 3 "" H 4350 4100 50  0001 C CNN
+	1    4350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 614E76FB
+P 4350 4250
+F 0 "#FLG0102" H 4350 4325 50  0001 C CNN
+F 1 "PWR_FLAG" H 4350 4423 50  0000 C CNN
+F 2 "" H 4350 4250 50  0001 C CNN
+F 3 "~" H 4350 4250 50  0001 C CNN
+	1    4350 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 614E6AF5
+P 4350 5000
+F 0 "#FLG0101" H 4350 5075 50  0001 C CNN
+F 1 "PWR_FLAG" H 4350 5173 50  0000 C CNN
+F 2 "" H 4350 5000 50  0001 C CNN
+F 3 "~" H 4350 5000 50  0001 C CNN
+	1    4350 5000
+	0    1    1    0   
+$EndComp
+Connection ~ 4350 5000
+Connection ~ 4350 4250
+Wire Wire Line
+	4350 4750 4350 5000
+Wire Wire Line
+	4350 4250 4350 4450
+$Comp
+L Device:CP1 C1
+U 1 1 614F575A
+P 4350 4600
+F 0 "C1" H 4465 4646 50  0000 L CNN
+F 1 "10uF" H 4465 4555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 4350 4600 50  0001 C CNN
+F 3 "~" H 4350 4600 50  0001 C CNN
+	1    4350 4600
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
